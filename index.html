@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusGrid</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>FocusGrid</h1>
+      <p class="subtitle">Plan your day, one hour at a time.</p>
+      <div class="date-row">
+        <label for="datePicker">Date:</label>
+        <input type="date" id="datePicker" />
+      </div>
+    </header>
+
+    <main>
+      <section class="summary">
+        <div class="card">
+          <h2>Today's Progress</h2>
+          <p><span id="completedCount">0</span> / <span id="totalCount">0</span> blocks completed</p>
+        </div>
+      </section>
+
+      <section id="planner" class="planner"></section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f8fb;
+  color: #222;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  color: #666;
+}
+
+.date-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.summary {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  color:blueviolet
+}
+
+.planner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.time-block {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.time-label {
+  font-weight: bold;
+}
+
+.task-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9dce3;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.completed .task-input {
+  text-decoration: line-through;
+  color: #888;
+  background: #f1f3f6;
+}
+
+@media (max-width: 600px) {
+  .time-block {
+    grid-template-columns: 1fr;
+  }
+}
