@@ -10,18 +10,46 @@
   <div class="app">
     <header class="header">
       <h1>FocusGrid</h1>
-      <p class="subtitle">Plan your day, one hour at a time.</p>
+      <p class="subtitle">Plan your day with calm, clarity, and one-hour blocks.</p>
       <div class="date-row">
-        <label for="datePicker">Date:</label>
-        <input type="date" id="datePicker" />
-      </div>
-    </header>
+        <div class="control-group">
+          <label for="datePicker">Date:</label>
+          <input type="date" id="datePicker" />
+        </div>
 
+        <div class="control-group">
+          <label for="startTime">Start:</label>
+          <select id="startTime"></select>
+        </div>
+
+        <div class="control-group">
+          <label for="endTime">End:</label>
+          <select id="endTime"></select>
+        </div>
+      </div>
+    </header>      
     <main>
+      
+      <section class="ongoing-focus">
+  <div class="card">
+    <h2>Ongoing Focus</h2>
+    <p class="focus-subtitle">Keep your main projects visible throughout the day.</p>
+
+    <div id="focusList" class="focus-list"></div>
+
+    <button type="button" id="addFocusBtn" class="add-focus-btn">+ Add focus</button>
+  </div>
+</section>
       <section class="summary">
         <div class="card">
           <h2>Today's Progress</h2>
-          <p><span id="completedCount">0</span> / <span id="totalCount">0</span> blocks completed</p>
+          <p class="progress-text">
+            <span id="completedCount">0</span> / <span id="totalCount">0</span> blocks completed
+          </p>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <p class="encouragement">One small block at a time.</p>
         </div>
       </section>
 
